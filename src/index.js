@@ -285,9 +285,26 @@ Modal.defaultProps = {
 
 /** Button Component */
 export const Button = props => {
-  var _classColor = props.color + "_bg";
+  // Select correct color
+  var _classButton = styles.white_bg;
+  switch (props.color) {
+    case "green":
+      _classButton = styles.green_bg;
+      break;
+    case "yellow":
+      _classButton = styles.yellow_bg;
+      break;
+    case "pink":
+      _classButton = styles.pink_bg;
+      break;
+    case "white":
+      _classButton = styles.white_bg;
+      break;
+  }
+
+  // Create final classes variable
   var _className =
-    props.className + " " + _classColor + " " + styles.mdf_button;
+    props.className + " " + _classButton + " " + styles.mdf_button;
   return (
     <button className={_className} onClick={() => props.onClick()}>
       {props.children}

@@ -7,7 +7,7 @@ body,
   width: 100%;
   height: 100%;
   background: #191735 !important;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif !important;
 }
 /** Main */
 .Main {
@@ -69,7 +69,7 @@ body,
   right: 0;
   bottom: 0;
   cursor: pointer;
-  animation: 0.35s ease-out 0s 1 FadeIn;
+  animation: FadeIn 0.35s ease-out 0s 1;
 }
 
 /** SidePanel styling */
@@ -84,7 +84,7 @@ body,
   cursor: default;
   overflow-y: scroll;
   z-index: 10;
-  animation: 0.35s ease-out 0s 1 SidePanelAppear;
+  animation: SidePanelAppear 0.35s ease-out 0s 1;
 }
 .SidePanel h2 {
   font-family: "Nunito Sans", sans-serif;
@@ -118,7 +118,7 @@ body,
   text-align: center;
   z-index: 10;
   cursor: default;
-  animation: 0.25s ease-out 0s 1 ModalAppear;
+  animation: ModalAppear 0.25s ease-out 0s 1;
 }
 .Modal h2 {
   font-family: "Nunito Sans", sans-serif;
@@ -152,6 +152,11 @@ body,
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
 }
 
+.white_bg {
+  color: #000000;
+  background-color: #ffffff;
+  outline: none;
+}
 .green_bg {
   color: #ffffff;
   background-image: linear-gradient(130deg, #1ad692, #46d8a3);
@@ -275,7 +280,7 @@ table.mdf_table td {
 }
 
 .p-10 {
-  padding: 10px;
+  padding: 10px !important;
 }
 
 .pleft-5 {
@@ -473,6 +478,7 @@ table.mdf_table td {
 }
 
 /** Keyframes Animation */
+
 @keyframes FadeIn {
   0% {
     opacity: 0;
@@ -481,6 +487,7 @@ table.mdf_table td {
     opacity: 1;
   }
 }
+
 @keyframes SidePanelAppear {
   0% {
     right: -600px;
