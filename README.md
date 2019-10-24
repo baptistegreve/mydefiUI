@@ -4,6 +4,9 @@
 
 [![NPM](https://img.shields.io/npm/v/@mydefi/ui.svg)](https://www.npmjs.com/package/@mydefi/ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Overview
+mydefiUI is a React Library used to build the user interface of the [MyDeFi](https://mydefi.org) app. We decided to open-source it to let anyone benefit from it and potentially build applications that could be integrated in MyDeFi.
+
 ## Install
 
 ```bash
