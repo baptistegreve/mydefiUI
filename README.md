@@ -53,10 +53,26 @@ import { Card } from '@mydefi/ui'
 </Card>
 ```
 #### Properties
-* **title:** Will automatically display a formatted title for the app.
-* **description:** Will automatically display a formatted description for the app.
+* **title (optional):** Will automatically display a formatted title for the card.
+* **description (optional):** Will automatically display a formatted description for the card.
 
-The apparence of the title and description properties can be customised by using a `<Text>` component instead of a simple string.
+The apparence of the *title* and *description* properties can be customised by using a `<Text>` component instead of a simple string.
+
+### SidePanel
+The SidePanel is an animated panel that appears from the right side of the screen. At MyDeFi we use it to display more details about an app when a user clicks on an app card.
+```jsx
+import { SidePanel } from '@mydefi/ui'
+
+<SidePanel title="Title of the SidePanel" description="This is the SidePanel description.">
+  {/* Add content here */}
+</SidePanel>
+```
+
+#### Properties
+* **title (optional):** Will automatically display a formatted title for the SidePanel.
+* **description (optional):** Will automatically display a formatted description for the SidePanel.
+
+The apparence of the *title* and *description* properties can be customised by using a `<Text>` component instead of a simple string.
 
 ## License
 
