@@ -1,0 +1,499 @@
+/* Import Custom Fonts */
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700,900&display=swap");
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  background: #191735 !important;
+  font-family: "Nunito Sans", sans-serif;
+}
+/** Main */
+.Main {
+  background: #191735 !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
+}
+
+/** Card Styling */
+.Card {
+  background-color: #211e43;
+  border-radius: 4px;
+  padding: 30px;
+  margin-bottom: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.Card h2 {
+  font-family: "Nunito Sans", sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 5px;
+  white-space: normal;
+  padding-right: 40px;
+}
+
+.Card h3 {
+  font-family: "Nunito Sans", sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 5px;
+  white-space: normal;
+  padding-right: 40px;
+}
+
+.Card p {
+  font-family: "Nunito Sans", sans-serif;
+  color: #6a668e;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  white-space: normal;
+  padding-right: 40px;
+}
+
+/** Background Wrapper (used for SidePanel and Modal) */
+.Background_Wrapper {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  animation: 0.35s ease-out 0s 1 FadeIn;
+}
+
+/** SidePanel styling */
+.SidePanel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 600px;
+  height: 100%;
+  background-color: #221e44;
+  padding: 25px;
+  cursor: default;
+  overflow-y: scroll;
+  z-index: 10;
+  animation: 0.35s ease-out 0s 1 SidePanelAppear;
+}
+.SidePanel h2 {
+  font-family: "Nunito Sans", sans-serif;
+  color: #ffffff;
+  font-size: 29px;
+  font-weight: bold;
+  margin-top: 10px !important;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.SidePanel p {
+  font-family: "Nunito Sans", sans-serif;
+  color: #6a668e;
+  font-size: 17px;
+  margin-bottom: 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/** Modal styling */
+.Modal {
+  position: absolute;
+  background: #221e44;
+  border-radius: 10px;
+  padding: 40px;
+  top: 100px;
+  width: 500px;
+  margin-left: -250px;
+  left: 50%;
+  text-align: center;
+  z-index: 10;
+  cursor: default;
+  animation: 0.25s ease-out 0s 1 ModalAppear;
+}
+.Modal h2 {
+  font-family: "Nunito Sans", sans-serif;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0px !important;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.Modal p {
+  font-family: "Nunito Sans", sans-serif;
+  color: #6a668e;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+/** Button styling */
+.mdf_button {
+  font-family: "Nunito Sans", sans-serif;
+  border-radius: 2px !important;
+  padding: 10px 13px;
+  font-weight: bold !important;
+  font-size: 15px !important;
+  border-width: 0px;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+}
+
+.green_bg {
+  color: #ffffff;
+  background-image: linear-gradient(130deg, #1ad692, #46d8a3);
+  outline: none;
+}
+.mdf_button.green_bg:hover {
+  background-image: linear-gradient(130deg, #1ad692, #1ad692);
+}
+.yellow_bg {
+  color: #ffffff;
+  background-image: linear-gradient(130deg, #fd9240, #fdb640);
+  outline: none;
+}
+.mdf_button.yellow_bg:hover {
+  background-image: linear-gradient(130deg, #fd9240, #fd9240);
+}
+.pink_bg {
+  color: #ffffff;
+  background-image: linear-gradient(130deg, #d43d76, #e74b86);
+  outline: none;
+}
+.mdf_button.pink_bg:hover {
+  background-image: linear-gradient(130deg, #d43d76, #d43d76);
+}
+
+/** Badges */
+.mdf_badge {
+  border-radius: 50px;
+  font-size: 12px;
+  padding: 3px 8px;
+  font-weight: bold;
+  display: inline-block;
+}
+.mdf_badge_label {
+  display: inline-block;
+  padding-left: 10px;
+  line-height: 1.2;
+  font-size: 15px;
+}
+.mdf_badge_label h2 {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 15px !important;
+}
+.mdf_badge_label p {
+  color: #6a668e;
+  font-size: 13px !important;
+}
+
+/** Table */
+table.mdf_table {
+  width: 100%;
+}
+
+table.mdf_table th {
+  color: #ffffff;
+  font-size: 13px;
+  text-align: left;
+  padding: 7px;
+  border-bottom: 1px solid #363265;
+}
+table.mdf_table td {
+  color: #6a668e;
+  font-size: 13px;
+  text-align: left;
+  padding: 7px;
+  border-bottom: 1px solid #363265;
+}
+
+/** Utilities */
+.align_middle {
+  vertical-align: middle !important;
+}
+.white {
+  color: #ffffff;
+}
+.grey {
+  color: #6a668e;
+}
+.blue {
+  color: #29cae4;
+}
+.yellow {
+  color: #fdb640;
+}
+.pink {
+  color: #e74b86;
+}
+.green {
+  color: #7ffacc;
+}
+.red {
+  color: #e85e5e;
+}
+.inline_block {
+  display: inline-block;
+}
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+.smallcaps {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.pleft-5 {
+  padding-left: 5px;
+}
+.pleft-10 {
+  padding-left: 10px;
+}
+.pleft-15 {
+  padding-left: 15px;
+}
+.pleft-20 {
+  padding-left: 20px;
+}
+
+.pright-5 {
+  padding-right: 5px;
+}
+.pright-10 {
+  padding-right: 10px;
+}
+.pright_15 {
+  padding-right: 15px;
+}
+.pright-20 {
+  padding-right: 20px;
+}
+
+.ptop-5 {
+  padding-top: 5px;
+}
+.ptop-10 {
+  padding-top: 10px;
+}
+.ptop-15 {
+  padding-top: 15px;
+}
+.ptop-20 {
+  padding-top: 20px;
+}
+.ptop-25 {
+  padding-top: 25px;
+}
+
+.mright-5 {
+  margin-right: 5px !important;
+}
+.mright-10 {
+  margin-right: 10px !important;
+}
+
+.mtop-10 {
+  margin-top: 10px !important;
+}
+.mtop-15 {
+  margin-top: 15px !important;
+}
+.mtop-20 {
+  margin-top: 20px !important;
+}
+.mtop-25 {
+  margin-top: 25px !important;
+}
+.mtop-30 {
+  margin-top: 30px !important;
+}
+.mtop-40 {
+  margin-top: 40px !important;
+}
+
+.mbottom-10 {
+  margin-bottom: 10px !important;
+}
+.mbottom-15 {
+  margin-bottom: 15px !important;
+}
+.mbottom-20 {
+  margin-bottom: 20px !important;
+}
+.mbottom-25 {
+  margin-bottom: 25px !important;
+}
+
+.br_2 {
+  border-radius: 2px;
+}
+.br_20 {
+  border-radius: 20px;
+}
+
+/** Inputs */
+.Field label {
+  color: #6a668e;
+  display: block;
+  text-align: left;
+  margin-bottom: 0px;
+  font-size: 15px;
+}
+.Field input {
+  display: block;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #2d2950;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 15px;
+  width: 100%;
+  border: 0px solid #000000;
+  outline: none;
+}
+.Field input::placeholder {
+  color: #6a668e;
+}
+
+/** CheckBox */
+.mdf_checkbox_container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  color: #ffffff;
+  padding-left: 28px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Hide the browser's default checkbox */
+.mdf_checkbox_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.mdf_checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #2d2950;
+  border-radius: 2px;
+}
+
+/* Show the checkmark when checked */
+.mdf_checkbox_container input:checked ~ .mdf_checkbox:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.mdf_checkmark {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 7px;
+  top: 2px;
+  width: 8px;
+  height: 15px;
+  border: solid #7ffacc;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* Show checkmark when input selected */
+.mdf_checkbox_container input:checked ~ .mdf_checkbox > .mdf_checkmark {
+  display: block;
+}
+
+/** Slider */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 7px;
+  background: #6a668e;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 50px;
+  box-shadow: 0px 15px -6px rgba(0, 0, 0, 0.1);
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 50px;
+  box-shadow: 0px 15px -6px rgba(0, 0, 0, 0.1);
+}
+
+/** Keyframes Animation */
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes SidePanelAppear {
+  0% {
+    right: -600px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+@keyframes ModalAppear {
+  0% {
+    top: 200px;
+  }
+  100% {
+    right: 100px;
+  }
+}
