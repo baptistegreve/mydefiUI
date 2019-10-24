@@ -28,6 +28,25 @@ class Example extends Component {
 }
 ```
 
+## Components
+
+Encapsulate your app in the Main component to ensure a correct display of all of our components.
+```jsx
+import {Main} from '@mydefi/ui'
+
+<Main>
+  {/* Your app here */}
+</Main>
+```
+
+The Card component can be used as a container for some specific data.
+```jsx
+import {Card} from '@mydefi/ui'
+
+<Card title="Title of the card" description="This is the card description, useful to display more details.">
+</Card>
+```
+
 ## License
 
 MIT © [baptistegreve](https://github.com/baptistegreve)
