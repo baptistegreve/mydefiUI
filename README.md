@@ -18,7 +18,7 @@ npm install --save @mydefi/ui
 ```jsx
 import React, { Component } from 'react'
 
-import {Main, Card} from '@mydefi/ui'
+import { Main, Card } from '@mydefi/ui'
 
 class Example extends Component {
   render () {
@@ -36,7 +36,7 @@ class Example extends Component {
 ### Main
 Encapsulate your app in the Main component to ensure a correct display of all of our components.
 ```jsx
-import {Main} from '@mydefi/ui'
+import { Main } from '@mydefi/ui'
 
 <Main>
   {/* Your app here */}
@@ -46,7 +46,7 @@ import {Main} from '@mydefi/ui'
 ### Card
 The Card component can be used as a container for some specific data.
 ```jsx
-import {Card} from '@mydefi/ui'
+import { Card } from '@mydefi/ui'
 
 <Card title="Title of the card" description="This is the card description.">
   {/* Add content here */}
