@@ -247,6 +247,7 @@ export const SidePanel = props => {
         onClick={() => props.onClose()}
       >
         <div className={styles.SidePanel} onClick={e => StopPropagation(e)}>
+          {DisplaySidePanelContent(props)}
           {props.children}
         </div>
       </div>
@@ -255,10 +256,23 @@ export const SidePanel = props => {
     return "";
   }
 };
-
 SidePanel.defaultProps = {
   onClose: () => _console("Add an onClose props to specify a close action.")
 };
+function DisplaySidePanelContent(props) {
+  if (props.title && props.description) {
+    return (
+      <React.Fragment>
+        <h2>{props.title}</h2>
+        <p>{props.description}</p>
+      </React.Fragment>
+    );
+  } else if (props.title) {
+    return <h2>{props.title}</h2>;
+  } else if (props.description) {
+    return <p>{props.description}</p>;
+  }
+}
 
 /** Modal Component */
 export const Modal = props => {
@@ -269,6 +283,7 @@ export const Modal = props => {
         onClick={() => props.onClose()}
       >
         <div className={styles.Modal} onClick={e => StopPropagation(e)}>
+          {DisplayModalContent(props)}
           {props.children}
         </div>
       </div>
@@ -277,11 +292,24 @@ export const Modal = props => {
     return "";
   }
 };
-
 Modal.defaultProps = {
   onClose: () =>
     _console("Add an onClose props to specify a close action for the modal.")
 };
+function DisplayModalContent(props) {
+  if (props.title && props.description) {
+    return (
+      <React.Fragment>
+        <h2>{props.title}</h2>
+        <p>{props.description}</p>
+      </React.Fragment>
+    );
+  } else if (props.title) {
+    return <h2>{props.title}</h2>;
+  } else if (props.description) {
+    return <p>{props.description}</p>;
+  }
+}
 
 /** Button Component */
 export const Button = props => {
