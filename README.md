@@ -21,7 +21,7 @@ class Example extends Component {
   render () {
     return (
       <Main>
-      <Card title="This is a test card" description="And more details about it."></Card>
+        <Card title="This is a test card" description="And more details about it."></Card>
       </Main>
     )
   }
