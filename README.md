@@ -50,8 +50,8 @@ import {Card} from '@mydefi/ui'
 </Card>
 ```
 #### Properties
-**title:** Will automatically display a formatted title for the app.
-**description:** Will automatically display a formatted description for the app.
+* **title:** Will automatically display a formatted title for the app.
+* **description:** Will automatically display a formatted description for the app.
 
 The apparence of the title and description properties can be customised by using a `<Text>` component instead of a simple string.
 
