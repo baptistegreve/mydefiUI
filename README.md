@@ -15,12 +15,14 @@ npm install --save @mydefi/ui
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from '@mydefi/ui'
+import {Main, Card} from '@mydefi/ui'
 
 class Example extends Component {
   render () {
     return (
-      <MyComponent />
+      <Main>
+      <Card title="This is a test card" description="And more details about it."></Card>
+      </Main>
     )
   }
 }
