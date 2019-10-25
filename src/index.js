@@ -154,6 +154,7 @@ export const Text = props => {
   return (
     <React.Fragment>
       <span
+        onClick={() => props.onClick()}
         className={_className}
         style={{
           fontSize: props.size,
@@ -170,7 +171,11 @@ Text.defaultProps = {
   className: "",
   smallcaps: false,
   size: "13px",
-  color: "#FFFFFF"
+  color: "#FFFFFF",
+  onClick: () =>
+    _console(
+      "Add an onClick parameter to your Text component to handle click events (optional)."
+    )
 };
 
 /** Badge Component */
