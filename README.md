@@ -39,4 +39,4 @@ We created a small website to help you learn how to use the mydefiUI. It's locat
 
 ## License
 
-MIT © [Baptiste Greve](https://github.com/baptistegreve)
+MIT © [Baptiste Greve](https://twitter.com/BaptisteGreve)
