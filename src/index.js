@@ -2,21 +2,37 @@ import React, { Component } from "react";
 import styles from "./ui.css";
 
 /** Theme Componenet */
-export const theme = {
+export const Colors = {
   textPrimary: "#FFFFFF",
   textSecondary: "#6a668e",
-  white: "#ffffff",
-  grey: "#6a668e",
+  textTertiary: "#8e8aaf",
+
+  mainBackground: "#191735",
+  secondaryBackground: "#211e43",
+  darkBackground01: "#11112b",
+  darkBackground02: "#191735",
+
+  positive: "#7ffacc",
+  negative: "#e85e5e",
+
+  green: "#46d8a3",
   blue: "#29cae4",
-  green: "#7ffacc",
   yellow: "#fdb640",
-  red: "#e85e5e",
-  pink: "#e74b86"
+  pink: "#e74b86",
+  white: "#ffffff",
+  grey: "#6a668e"
 };
 
 /** Main Component */
 export const Main = props => {
-  return <div className={styles.Main}>{props.children}</div>;
+  return (
+    <div
+      className={styles.Main}
+      style={{ backgroundColor: Colors.mainBackground }}
+    >
+      {props.children}
+    </div>
+  );
 };
 
 /** Card Component */
@@ -29,10 +45,17 @@ export const Card = props => {
     var _cardClasses = styles.Card + " " + props.className;
   }
   return (
-    <div className={_cardClasses} onClick={() => props.onClick()}>
+    <div
+      className={_cardClasses}
+      onClick={() => props.onClick()}
+      style={{
+        width: props.width,
+        backgroundColor: Colors.secondaryBackground
+      }}
+    >
       {DisplayCardIcon(props.icon)}
       {DisplayCardContent(props)}
-      {props.children}
+      <div className={styles.CardChildContainer}>{props.children}</div>
     </div>
   );
 };
@@ -40,6 +63,7 @@ Card.defaultProps = {
   className: "",
   title: null,
   description: null,
+  width: "100%",
   onClick: () =>
     _console("Add an onClick parameter to your card to handle click events.")
 };
@@ -80,7 +104,11 @@ function DisplayCardContent(props) {
 /** Tables Component includes (Table and TableRow) */
 export const Table = props => {
   var _className = props.className + " " + styles.mdf_table;
-  return <table className={_className}>{props.children}</table>;
+  return (
+    <table className={_className}>
+      <tbody>{props.children}</tbody>
+    </table>
+  );
 };
 Table.defaultProps = {
   className: ""
@@ -96,11 +124,22 @@ export class TableRow extends Component {
     // We check if the row is the head of the table or not
     if (this.props.head === true) {
       return this.props.data.map((prop, key) => {
-        return <th key={key}>{prop}</th>;
+        return (
+          <td
+            style={{ color: Colors.textPrimary, fontWeight: "bold" }}
+            key={key}
+          >
+            {prop}
+          </td>
+        );
       });
     } else {
       return this.props.data.map((prop, key) => {
-        return <td key={key}>{prop}</td>;
+        return (
+          <td style={{ color: Colors.textSecondary }} key={key}>
+            {prop}
+          </td>
+        );
       });
     }
   }
@@ -251,7 +290,11 @@ export const SidePanel = props => {
         className={styles.Background_Wrapper}
         onClick={() => props.onClose()}
       >
-        <div className={styles.SidePanel} onClick={e => StopPropagation(e)}>
+        <div
+          className={styles.SidePanel}
+          style={{ width: props.width }}
+          onClick={e => StopPropagation(e)}
+        >
           {DisplaySidePanelContent(props)}
           {props.children}
         </div>
@@ -262,6 +305,7 @@ export const SidePanel = props => {
   }
 };
 SidePanel.defaultProps = {
+  width: "600px",
   onClose: () => _console("Add an onClose props to specify a close action.")
 };
 function DisplaySidePanelContent(props) {
@@ -287,7 +331,11 @@ export const Modal = props => {
         className={styles.Background_Wrapper}
         onClick={() => props.onClose()}
       >
-        <div className={styles.Modal} onClick={e => StopPropagation(e)}>
+        <div
+          className={styles.Modal}
+          style={{ width: props.width }}
+          onClick={e => StopPropagation(e)}
+        >
           {DisplayModalContent(props)}
           {props.children}
         </div>
@@ -298,6 +346,7 @@ export const Modal = props => {
   }
 };
 Modal.defaultProps = {
+  width: "500px",
   onClose: () =>
     _console("Add an onClose props to specify a close action for the modal.")
 };
@@ -318,6 +367,9 @@ function DisplayModalContent(props) {
 
 /** Button Component */
 export const Button = props => {
+  // Create default style for button
+  var _defaultStyle = {};
+
   // Select correct color
   var _classButton = styles.white_bg;
   switch (props.color) {
@@ -333,13 +385,20 @@ export const Button = props => {
     case "white":
       _classButton = styles.white_bg;
       break;
+    default:
+      _defaultStyle = { backgroundColor: props.color };
+      break;
   }
 
   // Create final classes variable
   var _className =
     props.className + " " + _classButton + " " + styles.mdf_button;
   return (
-    <button className={_className} onClick={() => props.onClick()}>
+    <button
+      style={_defaultStyle}
+      className={_className}
+      onClick={() => props.onClick()}
+    >
       {props.children}
     </button>
   );
@@ -350,10 +409,10 @@ Button.defaultProps = {
   onClick: () => _console("Add an onClick parameter to your button.")
 };
 
-/** Field */
-export const Field = props => {
-  // Manage className
-  var _className = styles.Field + " " + props.className;
+/** TextField */
+export const TextField = props => {
+  // Manage TextField
+  var _className = styles.TextField + " " + props.className;
 
   if (props.label) {
     return (
@@ -366,7 +425,7 @@ export const Field = props => {
     return <div className={_className}>{props.children}</div>;
   }
 };
-Field.defaultProps = {
+TextField.defaultProps = {
   className: ""
 };
 

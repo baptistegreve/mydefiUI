@@ -11,7 +11,6 @@ body,
 }
 /** Main */
 .Main {
-  background: #191735 !important;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   width: 100%;
@@ -20,12 +19,15 @@ body,
 
 /** Card Styling */
 .Card {
-  background-color: #211e43;
   border-radius: 4px;
   padding: 30px;
   margin-bottom: 25px;
   white-space: nowrap;
   overflow: hidden;
+}
+.CardChildContainer {
+  white-space: normal;
+  width: 100%;
 }
 
 .Card h2 {
@@ -62,7 +64,7 @@ body,
 
 /** Background Wrapper (used for SidePanel and Modal) */
 .Background_Wrapper {
-  position: absolute;
+  position: fixed;
   background: rgba(0, 0, 0, 0.4);
   top: 0;
   left: 0;
@@ -70,6 +72,7 @@ body,
   bottom: 0;
   cursor: pointer;
   animation: FadeIn 0.35s ease-out 0s 1;
+  z-index: 1000;
 }
 
 /** SidePanel styling */
@@ -77,7 +80,6 @@ body,
   position: absolute;
   top: 0;
   right: 0;
-  width: 600px;
   height: 100%;
   background-color: #221e44;
   padding: 25px;
@@ -112,7 +114,6 @@ body,
   border-radius: 10px;
   padding: 40px;
   top: 100px;
-  width: 500px;
   margin-left: -250px;
   left: 50%;
   text-align: center;
@@ -191,6 +192,7 @@ body,
   display: inline-block;
 }
 .mdf_badge_label {
+  color: #ffffff;
   display: inline-block;
   padding-left: 10px;
   line-height: 1.2;
@@ -372,14 +374,15 @@ table.mdf_table td {
 }
 
 /** Inputs */
-.Field label {
+.TextField label {
   color: #6a668e;
   display: block;
   text-align: left;
   margin-bottom: 0px;
   font-size: 15px;
 }
-.Field input {
+.TextField input,
+.TextField textarea {
   display: block;
   font-family: "Nunito Sans", sans-serif;
   background-color: #2d2950;
@@ -392,7 +395,8 @@ table.mdf_table td {
   border: 0px solid #000000;
   outline: none;
 }
-.Field input::placeholder {
+.TextField input::placeholder,
+.TextField textarea::placeholder {
   color: #6a668e;
 }
 
