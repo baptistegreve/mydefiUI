@@ -33,7 +33,7 @@ class Example extends Component {
 
 ## Components & Documentation
 
-We created a small website to help you learn how to use the mydefiUI. It's located at (https://ui.mydefi.org)[ui.mydefi.org].
+We created a small website to help you learn how to use the mydefiUI. It's located at [https://ui.mydefi.org[(ui.mydefi.org).
 
 
 ## License
