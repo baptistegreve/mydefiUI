@@ -11,7 +11,7 @@ Learn how to use it with [ui.mydefi.org](https://ui.mydefi.org).
 ## Install
 
 ```bash
-npm install --save @mydefi/ui
+npm install @mydefi/ui
 ```
 
 ## Example Usage
