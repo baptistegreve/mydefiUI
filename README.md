@@ -6,6 +6,7 @@
 
 ## Overview
 mydefiUI is a React Library used to build the user interface of the [MyDeFi](https://mydefi.org) app. We decided to open-source it to let anyone benefit from it and potentially build applications that could be integrated in MyDeFi.
+Learn how to use it with [https://ui.mydefi.org[(ui.mydefi.org).
 
 ## Install
 
