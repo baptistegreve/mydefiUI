@@ -216,14 +216,12 @@ table.mdf_table {
 table.mdf_table th {
   color: #ffffff;
   font-size: 13px;
-  text-align: left;
   padding: 7px;
   border-bottom: 1px solid #363265;
 }
 table.mdf_table td {
   color: #6a668e;
   font-size: 13px;
-  text-align: left;
   padding: 7px;
   border-bottom: 1px solid #363265;
 }

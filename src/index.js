@@ -56,6 +56,22 @@ export const Main = props => {
   );
 };
 
+/** Asset Component (render an icon with a Symbol) */
+export const Asset = props => {
+  return (
+    <div className={styles.align_middle}>
+      <img
+        src={props.icon}
+        height={props.size}
+        style={{ marginRight: "4px" }}
+      />{" "}
+      <div className={styles.align_middle + " " + styles.inline_block}>
+        <Text size="15px">{props.symbol}</Text>
+      </div>
+    </div>
+  );
+};
+
 /** Card Component */
 export const Card = props => {
   /** Manage clickable cards */
