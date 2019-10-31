@@ -140,6 +140,12 @@ body,
   margin-top: 10px;
 }
 
+/** Asset */
+.label_asset {
+  text-align: left;
+  line-height: 1.2;
+}
+
 /** Button styling */
 .mdf_button {
   font-family: "Nunito Sans", sans-serif;

@@ -65,11 +65,22 @@ export const Asset = props => {
         height={props.size}
         style={{ marginRight: "4px" }}
       />{" "}
-      <div className={styles.align_middle + " " + styles.inline_block}>
+      <div
+        className={
+          styles.align_middle +
+          " " +
+          styles.inline_block +
+          " " +
+          styles.label_asset
+        }
+      >
         <Text size="15px">{props.symbol}</Text>
       </div>
     </div>
   );
+};
+Asset.defaultProps = {
+  size: "40px"
 };
 
 /** Card Component */
