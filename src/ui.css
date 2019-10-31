@@ -113,7 +113,7 @@ body,
   background: #221e44;
   border-radius: 10px;
   padding: 40px;
-  top: 100px;
+  top: 60px;
   margin-left: -250px;
   left: 50%;
   text-align: center;
@@ -506,9 +506,9 @@ table.mdf_table td {
 }
 @keyframes ModalAppear {
   0% {
-    top: 200px;
+    top: 180px;
   }
   100% {
-    right: 100px;
+    right: 60px;
   }
 }
