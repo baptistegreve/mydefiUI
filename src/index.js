@@ -373,6 +373,12 @@ function DisplaySidePanelContent(props) {
 
 /** Modal Component */
 export const Modal = props => {
+  // Calculate auto margin left
+  var _mLeft = parseInt(props.width) / 2;
+
+  // Generate final classname
+  var _className = styles.Modal + " " + props.className;
+
   if (props.visible == true) {
     return (
       <div
@@ -380,8 +386,8 @@ export const Modal = props => {
         onClick={() => props.onClose()}
       >
         <div
-          className={styles.Modal}
-          style={{ width: props.width }}
+          className={_className}
+          style={{ width: props.width, marginLeft: "-" + _mLeft + "px" }}
           onClick={e => StopPropagation(e)}
         >
           {DisplayModalContent(props)}
@@ -395,6 +401,7 @@ export const Modal = props => {
 };
 Modal.defaultProps = {
   width: "500px",
+  className: "",
   onClose: () =>
     _console("Add an onClose props to specify a close action for the modal.")
 };
