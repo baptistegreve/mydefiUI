@@ -78,15 +78,11 @@ body,
 /** SidePanel styling */
 .SidePanel {
   position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
   background-color: #221e44;
   padding: 25px;
   cursor: default;
   overflow-y: scroll;
   z-index: 10;
-  animation: SidePanelAppear 0.35s ease-out 0s 1;
 }
 .SidePanel h2 {
   font-family: "Nunito Sans", sans-serif;
@@ -106,37 +102,24 @@ body,
   text-align: center;
   margin-bottom: 40px;
 }
-
-.SidePanelMobile {
-  position: absolute;
-  background-color: #221e44;
-  padding: 25px;
-  cursor: default;
-  overflow-y: scroll;
-  z-index: 10;
-  bottom: 0px;
-  width: 100% !important;
-  height: 500px !important;
-  border-radius: 8px;
-  animation: SidePanelMobileAppear 0.35s ease-out 0s 1 !important;
+/** Mobile */
+@media screen and (max-width: 800px) {
+  .SidePanel {
+    bottom: 0px;
+    width: 100% !important;
+    height: 500px !important;
+    border-radius: 8px;
+    animation: SidePanelMobileAppear 0.35s ease-out 0s 1 !important;
+  }
 }
-.SidePanelMobile h2 {
-  font-family: "Nunito Sans", sans-serif;
-  color: #ffffff;
-  font-size: 29px;
-  font-weight: bold;
-  margin-top: 10px !important;
-  margin-bottom: 5px;
-  text-align: center;
-}
-
-.SidePanelMobile p {
-  font-family: "Nunito Sans", sans-serif;
-  color: #6a668e;
-  font-size: 17px;
-  margin-bottom: 0;
-  text-align: center;
-  margin-bottom: 40px;
+/** Desktop */
+@media screen and (min-width: 800px) {
+  .SidePanel {
+    top: 0;
+    right: 0;
+    height: 100%;
+    animation: SidePanelAppear 0.35s ease-out 0s 1;
+  }
 }
 
 /** Modal styling */
