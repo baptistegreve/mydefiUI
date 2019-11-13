@@ -107,6 +107,38 @@ body,
   margin-bottom: 40px;
 }
 
+.SidePanelMobile {
+  position: absolute;
+  background-color: #221e44;
+  padding: 25px;
+  cursor: default;
+  overflow-y: scroll;
+  z-index: 10;
+  bottom: 0px;
+  width: 100% !important;
+  height: 500px !important;
+  border-radius: 8px;
+  animation: SidePanelMobileAppear 0.35s ease-out 0s 1 !important;
+}
+.SidePanelMobile h2 {
+  font-family: "Nunito Sans", sans-serif;
+  color: #ffffff;
+  font-size: 29px;
+  font-weight: bold;
+  margin-top: 10px !important;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.SidePanelMobile p {
+  font-family: "Nunito Sans", sans-serif;
+  color: #6a668e;
+  font-size: 17px;
+  margin-bottom: 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 /** Modal styling */
 .Modal {
   position: absolute;
@@ -502,6 +534,14 @@ table.mdf_table td {
   }
   100% {
     right: 0px;
+  }
+}
+@keyframes SidePanelMobileAppear {
+  0% {
+    bottom: -500px;
+  }
+  100% {
+    bottom: 0px;
   }
 }
 @keyframes ModalAppear {

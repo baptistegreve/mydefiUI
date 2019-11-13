@@ -332,6 +332,15 @@ Badge.defaultProps = {
 
 /** SidePanel Component */
 export const SidePanel = props => {
+  // Generate classname for SidePanel (mobile and desktop)
+  var _className;
+  if (window.innerWidth > 800) {
+    _className = styles.SidePanel;
+  } else {
+    _className = styles.SidePanelMobile;
+  }
+
+  // Return results
   if (props.visible == true) {
     return (
       <div
@@ -339,7 +348,7 @@ export const SidePanel = props => {
         onClick={() => props.onClose()}
       >
         <div
-          className={styles.SidePanel}
+          className={_className}
           style={{ width: props.width }}
           onClick={e => StopPropagation(e)}
         >
